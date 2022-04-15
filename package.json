@@ -4,9 +4,9 @@
 	"private": true,
 	"scripts": {
 		"start": "npm-run-all --parallel serve:main serve:pokemon serve:rick_and_morty",
-		"serve:main": "cd main && npm start",
-		"serve:pokemon": "cd pokemon && npm start",
-		"serve:rick_and_morty": "cd rick_and_morty && npm start"
+		"serve:main": "cd apps/main && npm start",
+		"serve:pokemon": "cd apps/pokemon && npm start",
+		"serve:rick_and_morty": "cd apps/rick_and_morty && npm start"
 	},
 	"dependencies": {
 		"@testing-library/jest-dom": "^5.14.1",
@@ -18,6 +18,7 @@
 		"@types/react-dom": "^18.0.0",
 		"react": "^18.0.0",
 		"react-dom": "^18.0.0",
+		"react-router-dom": "6",
 		"react-scripts": "5.0.1",
 		"typescript": "^4.4.2",
 		"web-vitals": "^2.1.0"

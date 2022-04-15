@@ -32,13 +32,13 @@ module.exports = {
 		]
 	},
 	plugins: [
+		new MiniCSSExtractPlugin(),
+
+		new InterpolateHtmlPlugin({ PUBLIC_URL: "public" }),
+
 		new HtmlWebpackPlugin({
 			filename: "./index.html",
 			template: "./public/index.html"
-		}),
-
-		new MiniCSSExtractPlugin(),
-
-		new InterpolateHtmlPlugin({ PUBLIC_URL: "public" })
+		})
 	]
 };

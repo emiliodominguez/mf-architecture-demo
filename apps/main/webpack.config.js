@@ -1,7 +1,7 @@
 const { merge } = require("webpack-merge");
-const commonConfiguration = require("../webpack.common.js");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
-const deps = require("../package.json").dependencies;
+const commonConfiguration = require("../../webpack.common.js");
+const deps = require("../../package.json").dependencies;
 
 module.exports = merge(commonConfiguration, {
 	entry: "./src/index",
