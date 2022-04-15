@@ -1,0 +1,41 @@
+{
+	"name": "mf-architecture-demo",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"start": "npm-run-all --parallel serve:main serve:pokemon serve:rick_and_morty",
+		"serve:main": "cd main && npm start",
+		"serve:pokemon": "cd pokemon && npm start",
+		"serve:rick_and_morty": "cd rick_and_morty && npm start"
+	},
+	"dependencies": {
+		"@testing-library/jest-dom": "^5.14.1",
+		"@testing-library/react": "^13.0.0",
+		"@testing-library/user-event": "^13.2.1",
+		"@types/jest": "^27.0.1",
+		"@types/node": "^16.7.13",
+		"@types/react": "^18.0.0",
+		"@types/react-dom": "^18.0.0",
+		"react": "^18.0.0",
+		"react-dom": "^18.0.0",
+		"react-scripts": "5.0.1",
+		"typescript": "^4.4.2",
+		"web-vitals": "^2.1.0"
+	},
+	"devDependencies": {
+		"babel-loader": "^8.2.4",
+		"css-loader": "^6.7.1",
+		"html-webpack-plugin": "^5.5.0",
+		"interpolate-html-plugin": "^4.0.0",
+		"mini-css-extract-plugin": "^2.6.0",
+		"npm-run-all": "^4.1.5",
+		"sass": "^1.50.0",
+		"sass-loader": "^12.6.0",
+		"ts-loader": "^9.2.8",
+		"webpack": "^5.72.0",
+		"webpack-cli": "^4.9.2",
+		"webpack-dev-server": "^4.8.1",
+		"webpack-merge": "^5.8.0",
+		"webpack-server": "^0.1.2"
+	}
+}

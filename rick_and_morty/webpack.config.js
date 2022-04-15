@@ -1,52 +1,21 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { merge } = require("webpack-merge");
+const commonConfiguration = require("../webpack.common.js");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
-const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
-const InterpolateHtmlPlugin = require("interpolate-html-plugin");
+const deps = require("../package.json").dependencies;
 
-module.exports = {
-	mode: "development",
-	devServer: { port: 3002 },
+module.exports = merge(commonConfiguration, {
 	entry: "./src/index",
-	devtool: "source-map",
-	resolve: { extensions: [".tsx", ".ts", ".jsx", ".js", ".json"] },
-	module: {
-		rules: [
-			// Javascript
-			{
-				test: /\.(js|jsx)$/,
-				exclude: /node_modules/,
-				loader: "babel-loader",
-				options: {
-					presets: ["@babel/preset-env", "@babel/preset-react"]
-				}
-			},
-			// Typescript
-			{
-				test: /\.(ts|tsx)$/,
-				use: "ts-loader",
-				exclude: [/node_modules/]
-			},
-			// CSS
-			{
-				test: /\.(c|sc|sa)ss$/,
-				use: [MiniCSSExtractPlugin.loader, "css-loader", "sass-loader"]
-			}
-		]
-	},
+	devServer: { port: 3002 },
 	plugins: [
 		new ModuleFederationPlugin({
 			name: "rick_and_morty",
 			filename: "remoteEntry.js",
-			exposes: { "./RickAndMorty": "./src/components/App" }
-		}),
-
-		new HtmlWebpackPlugin({
-			filename: "./index.html",
-			template: "./public/index.html"
-		}),
-
-		new MiniCSSExtractPlugin(),
-
-		new InterpolateHtmlPlugin({ PUBLIC_URL: "public" })
+			exposes: { "./RickAndMorty": "./src/components/App" },
+			shared: {
+				...deps,
+				react: { singleton: true, eager: true, requiredVersion: deps.react },
+				"react-dom": { singleton: true, eager: true, requiredVersion: deps["react-dom"] }
+			}
+		})
 	]
-};
+});
