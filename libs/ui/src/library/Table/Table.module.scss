@@ -1,21 +1,24 @@
+.container {
+	max-width: 100%;
+	overflow-x: auto;
+}
+
 .table {
 	width: 100%;
 	text-align: left;
+	white-space: nowrap;
 	border-collapse: collapse;
 
 	thead {
 		tr {
-			border-bottom: 1px solid rgba(var(--contrast-color), 0.25);
+			border-bottom: 1px solid rgba(var(--contrast-color), 0.2);
 		}
 	}
 
 	tbody {
 		tr {
 			transition: background-color ease 250ms;
-
-			&:nth-child(even) {
-				background-color: rgb(var(--tertiary-color));
-			}
+			border-bottom: 1px solid rgba(var(--contrast-color), 0.1);
 
 			&:hover {
 				background-color: rgb(var(--secondary-color));
@@ -23,16 +26,13 @@
 		}
 	}
 
-	td,
-	th {
-		padding: 20px 15px;
-	}
-
 	th {
 		font-weight: 500;
+		padding: 10px 15px;
 	}
 
 	td {
 		font-size: 14px;
+		padding: 20px 15px;
 	}
 }

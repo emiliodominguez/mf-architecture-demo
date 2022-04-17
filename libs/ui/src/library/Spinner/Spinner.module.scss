@@ -1,0 +1,17 @@
+.spinner {
+	$base-size: 20px;
+
+	width: $base-size;
+	height: $base-size;
+	border: $base-size * 0.2 solid rgb(var(--highlight-color));
+	border-top-color: rgb(var(--contrast-color));
+	border-radius: 50%;
+	margin: 0 auto;
+	animation: spin linear infinite 1s;
+}
+
+@keyframes spin {
+	to {
+		transform: rotate(360deg);
+	}
+}

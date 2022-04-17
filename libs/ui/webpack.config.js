@@ -12,7 +12,10 @@ module.exports = merge(commonConfiguration, {
 			filename: "remoteEntry.js",
 			exposes: {
 				"./GlobalStyles": "./src/styles/main.scss",
-				"./Library/Table": "./src/library/Table"
+				"./Library/Button": "./src/library/Button",
+				"./Library/Table": "./src/library/Table",
+				"./Library/Pagination": "./src/library/Pagination",
+				"./Library/Spinner": "./src/library/Spinner"
 			},
 			shared: {
 				...deps,

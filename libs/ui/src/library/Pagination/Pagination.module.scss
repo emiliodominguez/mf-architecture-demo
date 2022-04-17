@@ -1,0 +1,59 @@
+.pagination {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 25px auto;
+
+	> button {
+		min-width: 100px;
+	}
+}
+
+.pageSelector {
+	position: relative;
+	min-width: 65px;
+	margin: 0 10px;
+	border-radius: 5px;
+
+	&.toTop {
+		ul {
+			top: auto;
+			bottom: 100%;
+		}
+	}
+
+	&,
+	span {
+		text-align: center;
+	}
+
+	&,
+	button {
+		background-color: transparent;
+		border: none;
+		padding: 10px 15px;
+		color: rgb(var(--contrast-color));
+		transition: background-color ease 250ms;
+		cursor: pointer;
+
+		&:focus,
+		&:hover {
+			background-color: rgb(var(--secondary-color));
+		}
+	}
+
+	ul {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		max-height: 200px;
+		background-color: rgb(var(--tertiary-color));
+		overflow-y: auto;
+
+		&,
+		button {
+			width: 100%;
+			text-align: left;
+		}
+	}
+}
