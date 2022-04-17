@@ -1,0 +1,38 @@
+.table {
+	width: 100%;
+	text-align: left;
+	border-collapse: collapse;
+
+	thead {
+		tr {
+			border-bottom: 1px solid rgba(var(--contrast-color), 0.25);
+		}
+	}
+
+	tbody {
+		tr {
+			transition: background-color ease 250ms;
+
+			&:nth-child(even) {
+				background-color: rgb(var(--tertiary-color));
+			}
+
+			&:hover {
+				background-color: rgb(var(--secondary-color));
+			}
+		}
+	}
+
+	td,
+	th {
+		padding: 20px 15px;
+	}
+
+	th {
+		font-weight: 500;
+	}
+
+	td {
+		font-size: 14px;
+	}
+}

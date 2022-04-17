@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+* {
+	&::-webkit-scrollbar {
+		width: 8px;
+		height: 8px;
+
+		&-track {
+			background-color: rgba(var(--contrast-color), 0.25);
+		}
+
+		&-thumb {
+			background-color: rgba(var(--contrast-color), 0.75);
+		}
+	}
+}
+
+body {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	background-color: rgb(var(--primary-color));
+	color: rgb(var(--contrast-color));
+}
