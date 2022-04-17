@@ -4,6 +4,7 @@
 	padding: 10px 0;
 	text-align: center;
 	white-space: nowrap;
+	user-select: none;
 	overflow-y: hidden;
 	overflow-x: auto;
 
@@ -28,6 +29,7 @@
 			&:global(.active) {
 				background-color: rgba(var(--contrast-color), 0.25);
 				color: rgb(var(--contrast-color));
+				cursor: default;
 			}
 		}
 	}

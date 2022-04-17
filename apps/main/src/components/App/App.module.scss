@@ -1,5 +1,5 @@
 $header-height: 75px;
-$footer-height: 150px;
+$footer-height: 100px;
 
 .header {
 	height: $header-height;
@@ -35,6 +35,10 @@ $footer-height: 150px;
 		&:global(.active),
 		&:hover {
 			color: rgb(var(--highlight-color));
+		}
+
+		&:global(.active) {
+			cursor: default;
 		}
 	}
 }
