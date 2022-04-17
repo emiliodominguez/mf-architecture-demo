@@ -1,0 +1,60 @@
+.title {
+	font-size: clamp(32px, 5vw, 50px);
+	font-weight: lighter;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+	grid-gap: 50px;
+	padding: 0 clamp(25px, 5vw, 150px);
+}
+
+.card {
+	position: relative;
+	min-height: 400px;
+	background-image: linear-gradient(-90deg, rgb(var(--tertiary-color)), rgb(var(--secondary-color)));
+	box-shadow: inset var(--shadow-x, 0) var(--shadow-y, 0) 75px rgba(var(--primary-color), 0.25), 0 0 25px rgba(#000, 0.25), 0 0 25px rgba(#000, 0.35);
+	padding: 25px;
+	border: 5px solid rgba(var(--contrast-color), 0.15);
+	border-radius: 5px;
+	transition: transform ease 250ms;
+	overflow: hidden;
+
+	&:hover {
+		$rotation: 2deg;
+
+		transform: scale(1.05) rotate(var(--rotation, $rotation));
+
+		img {
+			transform: scale(1.5) rotate(calc(var(--rotation, $rotation) * -1));
+		}
+	}
+
+	h2 {
+		margin-bottom: 25px;
+		font-weight: 200;
+	}
+
+	ul {
+		list-style: none;
+		line-height: 2;
+
+		b {
+			font-weight: 600;
+			color: rgba(var(--contrast-color), 0.5);
+			margin-right: 5px;
+		}
+	}
+
+	img {
+		position: absolute;
+		bottom: 10px;
+		right: 10px;
+		width: 150px;
+		object-fit: contain;
+		transition: transform ease 250ms;
+	}
+}
