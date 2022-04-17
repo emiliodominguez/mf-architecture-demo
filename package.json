@@ -3,7 +3,8 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"start": "npm-run-all --parallel serve:main serve:pokemon serve:rick_and_morty",
+		"start": "npm-run-all --parallel serve:ui serve:main serve:pokemon serve:rick_and_morty",
+		"serve:ui": "cd libs/ui && npm start",
 		"serve:main": "cd apps/main && npm start",
 		"serve:pokemon": "cd apps/pokemon && npm start",
 		"serve:rick_and_morty": "cd apps/rick_and_morty && npm start"

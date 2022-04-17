@@ -1,7 +1,8 @@
 {
-	"compileOnSave": false,
+	"compileOnSave": true,
 	"compilerOptions": {
 		"rootDir": ".",
+		"baseUrl": ".",
 		"target": "es5",
 		"module": "esnext",
 		"moduleResolution": "node",
@@ -9,7 +10,6 @@
 		"strict": true,
 		"allowJs": true,
 		"sourceMap": true,
-		"declaration": false,
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
 		"importHelpers": true,
@@ -19,10 +19,9 @@
 		"allowSyntheticDefaultImports": true,
 		"forceConsistentCasingInFileNames": true,
 		"noFallthroughCasesInSwitch": true,
+		"downlevelIteration": true,
 		"resolveJsonModule": true,
-		"isolatedModules": false,
-		"baseUrl": ".",
-		"paths": {}
+		"isolatedModules": false
 	},
 	"exclude": ["node_modules", "tmp"]
 }

@@ -11,6 +11,7 @@ module.exports = merge(commonConfiguration, {
 			name: "rick_and_morty",
 			filename: "remoteEntry.js",
 			exposes: { "./RickAndMorty": "./src/components/App" },
+			remotes: { ui: "ui@http://localhost:3003/remoteEntry.js" },
 			shared: {
 				...deps,
 				react: { singleton: true, eager: true, requiredVersion: deps.react },

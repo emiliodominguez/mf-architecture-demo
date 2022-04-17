@@ -1,0 +1,34 @@
+.menu {
+	display: block;
+	margin: 25px auto 50px;
+	padding: 10px 0;
+	text-align: center;
+	white-space: nowrap;
+	overflow-y: hidden;
+	overflow-x: auto;
+
+	li {
+		display: inline-block;
+
+		a {
+			display: block;
+			color: rgb(var(--contrast-color));
+			text-decoration: none;
+			font-size: 18px;
+			padding: 10px 20px;
+			line-height: 1;
+			border-radius: 5px;
+			font-weight: 200;
+			transition: background-color ease 250ms, color ease 250ms;
+
+			&:hover {
+				color: rgb(var(--highlight-color));
+			}
+
+			&:global(.active) {
+				background-color: rgba(var(--contrast-color), 0.25);
+				color: rgb(var(--contrast-color));
+			}
+		}
+	}
+}

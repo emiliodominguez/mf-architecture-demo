@@ -3,7 +3,7 @@ $footer-height: 150px;
 
 .header {
 	height: $header-height;
-	background-color: #151b22;
+	background-color: rgb(var(--tertiary-color));
 }
 
 .nav {
@@ -26,7 +26,7 @@ $footer-height: 150px;
 	}
 
 	a {
-		color: #fff;
+		color: rgb(var(--contrast-color));
 		font-size: 18px;
 		font-weight: lighter;
 		text-decoration: none;
@@ -34,26 +34,20 @@ $footer-height: 150px;
 
 		&:global(.active),
 		&:hover {
-			color: #5ba7fd;
+			color: rgb(var(--highlight-color));
 		}
 	}
-}
-
-.content,
-.footer {
-	background-color: #0d1116;
 }
 
 .content {
 	height: calc(100vh - #{$header-height + $footer-height});
 	padding: 25px;
-	color: #fff;
 	overflow-y: auto;
 }
 
 .footer {
 	height: $footer-height;
-	border-top: 1px solid #20262d;
+	border-top: 1px solid rgb(var(--secondary-color));
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -68,7 +62,7 @@ $footer-height: 150px;
 
 		&:hover {
 			svg path {
-				fill: #5ba7fd;
+				fill: rgb(var(--highlight-color));
 			}
 		}
 
@@ -76,7 +70,7 @@ $footer-height: 150px;
 			height: 25px;
 
 			path {
-				fill: #fff;
+				fill: rgb(var(--contrast-color));
 				transition: fill ease 250ms;
 			}
 		}

@@ -11,7 +11,7 @@ const routes = Object.freeze({
 		component: <Home />
 	},
 	pokemon: {
-		url: "pokemon",
+		url: "pokemon/*",
 		label: "Pokemon",
 		component: (
 			<Suspense fallback="Loading...">
@@ -20,7 +20,7 @@ const routes = Object.freeze({
 		)
 	},
 	rickAndMorty: {
-		url: "rick-and-morty",
+		url: "rick-and-morty/*",
 		label: "Rick & Morty",
 		component: (
 			<Suspense fallback="Loading...">

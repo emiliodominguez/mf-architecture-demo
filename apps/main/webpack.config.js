@@ -5,14 +5,21 @@ const deps = require("../../package.json").dependencies;
 
 module.exports = merge(commonConfiguration, {
 	entry: "./src/index",
-	devServer: { port: 3000 },
+	devServer: {
+		port: 3000,
+		historyApiFallback: true,
+		hot: true
+	},
+	output: { publicPath: "/" },
+	optimization: { runtimeChunk: "single" },
 	plugins: [
 		new ModuleFederationPlugin({
 			name: "main",
 			filename: "remoteEntry.js",
 			remotes: {
 				pokemon: "pokemon@http://localhost:3001/remoteEntry.js",
-				rick_and_morty: "rick_and_morty@http://localhost:3002/remoteEntry.js"
+				rick_and_morty: "rick_and_morty@http://localhost:3002/remoteEntry.js",
+				ui: "ui@http://localhost:3003/remoteEntry.js"
 			},
 			shared: {
 				...deps,
