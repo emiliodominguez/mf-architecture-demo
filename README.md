@@ -1,21 +1,33 @@
 # 🚀 Micro Frontend Architecture Demo
 
-## 🛠️ Run
+---
+
+# Table of contents
+
+- [🛠️ Run](#run)
+- [🐚 Shell app](#shell-app)
+- [📡 Remotes](#remotes)
+- [📚 Contexts](#contexts)
+- [📚 Libraries](#libraries)
+
+---
+
+## Run
 
 `npm start`
 
 ---
 
-## 🐚 Shell app
+## Shell app
 
 - Source: `apps/main`
 - Start script: `npm run serve:main`
 - Port: `3000`
-- Remotes: `pokemon, rick_and_morty, ui`
+- Remotes: `pokemon, rick_and_morty, chuck_norris, ui`
 
 ---
 
-## 📡 Remotes
+## Remotes
 
 #### Pokemon
 
@@ -35,7 +47,18 @@
 
 ---
 
-## 📚 Libraries
+## Contexts
+
+#### Chuck Norris
+
+- Source: `contexts/chuck_norris`
+- Start script: `npm run serve:chuck_norris`
+- Port: `3003`
+- Exposes: `ChuckNorrisContextProvider, useChuckNorris`
+
+---
+
+## Libraries
 
 #### UI
 
