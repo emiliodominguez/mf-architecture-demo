@@ -19,7 +19,8 @@ module.exports = merge(commonConfiguration, {
 			remotes: {
 				pokemon: "pokemon@http://localhost:3001/remoteEntry.js",
 				rick_and_morty: "rick_and_morty@http://localhost:3002/remoteEntry.js",
-				ui: "ui@http://localhost:3003/remoteEntry.js"
+				chuck_norris: "chuck_norris@http://localhost:3003/remoteEntry.js",
+				ui: "ui@http://localhost:3004/remoteEntry.js"
 			},
 			shared: {
 				...deps,

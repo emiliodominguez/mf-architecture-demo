@@ -5,13 +5,12 @@ const deps = require("../../package.json").dependencies;
 
 module.exports = merge(commonConfiguration, {
 	entry: "./src/index",
-	devServer: { port: 3001 },
+	devServer: { port: 3003 },
 	plugins: [
 		new ModuleFederationPlugin({
-			name: "pokemon",
+			name: "chuck_norris",
 			filename: "remoteEntry.js",
-			exposes: { "./Pokemon": "./src/components/App" },
-			remotes: { ui: "ui@http://localhost:3004/remoteEntry.js" },
+			exposes: { "./ChuckNorrisContext": "./src/components/ChuckNorrisContext" },
 			shared: {
 				...deps,
 				react: { singleton: true, eager: true, requiredVersion: deps.react },

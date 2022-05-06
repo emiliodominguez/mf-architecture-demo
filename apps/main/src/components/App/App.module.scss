@@ -9,9 +9,17 @@ $footer-height: 100px;
 .nav {
 	height: 100%;
 	padding: 0 25px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+
+	&,
+	ul {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	ul {
+		overflow-x: auto;
+	}
 }
 
 .elements {
@@ -29,6 +37,7 @@ $footer-height: 100px;
 		color: rgb(var(--contrast-color));
 		font-size: 18px;
 		font-weight: lighter;
+		white-space: pre;
 		text-decoration: none;
 		transition: color ease 250ms;
 

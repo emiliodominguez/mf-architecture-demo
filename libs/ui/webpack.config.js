@@ -5,7 +5,7 @@ const deps = require("../../package.json").dependencies;
 
 module.exports = merge(commonConfiguration, {
 	entry: "./src/index",
-	devServer: { port: 3003 },
+	devServer: { port: 3004 },
 	plugins: [
 		new ModuleFederationPlugin({
 			name: "ui",
