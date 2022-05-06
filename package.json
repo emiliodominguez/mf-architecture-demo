@@ -3,6 +3,7 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
+		"prestart": "yarn install",
 		"start": "npm-run-all --parallel serve:ui serve:main serve:pokemon serve:rick_and_morty serve:chuck_norris",
 		"serve:ui": "cd libs/ui && npm start",
 		"serve:main": "cd apps/main && npm start",
